@@ -3,13 +3,11 @@
 import React, { useState, useEffect } from 'react'
 import styles from './authLinks.module.css'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import SignInModal from '../signInModal/SignInModal'
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false)
   const [showSignInModal, setShowSignInModal] = useState(false)
-  const router = useRouter()
   
   const handleSignIn = (e) => {
     e.preventDefault()
