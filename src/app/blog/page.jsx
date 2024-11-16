@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './blog.module.css'
-import Cardlist from '@/components/cardList/Cardlist'
+import CardList from '@/components/cardList/cardList'
 import Menu from '@/components/menu/Menu'
 
 const BlogPage = ({ searchParams }) => {
@@ -11,7 +11,7 @@ const BlogPage = ({ searchParams }) => {
     <div className={styles.container}>
       <h1 className={styles.title}>{cat} Blog</h1>
       <div className={styles.content}>
-        <Cardlist page={page} cat={cat}/>
+        <CardList page={page} cat={cat}/>
         <Menu />
       </div>
     </div>
