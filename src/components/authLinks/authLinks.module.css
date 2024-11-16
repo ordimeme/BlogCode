@@ -1,0 +1,224 @@
+.link {
+    cursor: pointer;
+}
+
+.signIn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--buttonBg);
+    color: var(--buttonText);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 15px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontFamily);
+    white-space: nowrap;
+    min-width: 80px;
+}
+
+.signIn:hover {
+    background-color: var(--buttonHover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signIn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.burger {
+    width: 20px;
+    height: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--textColor);
+    transition: all 0.3s ease;
+    transform-origin: left;
+}
+
+.burger.active .line:first-child {
+    transform: rotate(45deg);
+    width: 22px;
+}
+
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .line:last-child {
+    transform: rotate(-45deg);
+    width: 22px;
+}
+
+.responsiveMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    z-index: 998;
+    animation: slideIn 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+}
+
+.responsiveMenu a {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--textColor);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+    padding: 12px 0;
+}
+
+.responsiveMenu a:not(:has(button))::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--buttonBg);
+    transition: width 0.3s ease;
+}
+
+.responsiveMenu a:not(:has(button)):hover {
+    color: var(--buttonBg);
+}
+
+.responsiveMenu a:not(:has(button)):hover::after {
+    width: 100%;
+}
+
+.responsiveMenu a:has(button) {
+    text-decoration: none !important;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.responsiveMenu a:has(button):hover {
+    text-decoration: none;
+}
+
+.responsiveMenu a:has(button)::after {
+    display: none;
+}
+
+.responsiveMenuSignIn {
+    width: 250px;
+    padding: 14px 28px;
+    font-size: 16px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--buttonBg);
+    color: var(--buttonText);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--fontFamily);
+    white-space: nowrap;
+}
+
+.responsiveMenuSignIn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--buttonHover);
+}
+
+.responsiveMenuSignIn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+    .link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .responsiveMenuSignIn {
+        width: 85%;
+        max-width: 300px;
+        padding: 12px 24px;
+        font-size: 15px;
+        margin-top: 40px;
+        min-width: 200px;
+    }
+    
+    .responsiveMenu a {
+        font-size: 22px;
+        padding: 12px 0;
+    }
+    
+    .responsiveMenu {
+        gap: 30px;
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .responsiveMenuSignIn {
+        width: 90%;
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 180px;
+    }
+    
+    .responsiveMenu {
+        gap: 25px;
+    }
+    
+    .responsiveMenu a {
+        font-size: 20px;
+    }
+}
+
+.closeButton {
+    display: none;
+}

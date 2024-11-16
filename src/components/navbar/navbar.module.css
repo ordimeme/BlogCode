@@ -1,0 +1,159 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.social {
+    display: flex;
+    gap: 14px;
+    flex: 1;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    font-size: 18px;
+    justify-content: flex-end;
+}
+
+.link {
+    padding: 6px 12px;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.link:hover {
+    background-color: var(--softBg);
+    color: var(--buttonBg);
+}
+
+.link::after {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .social {
+        display: none;
+    }
+    .logo {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        justify-content: flex-end;
+    }
+    
+    .link {
+        display: none;
+    }
+    
+    .social {
+        display: none;
+    }
+    
+    .logo {
+        text-align: left;
+    }
+    
+    .menuBtn {
+        display: block;
+    }
+    
+    .mobileMenu .loginButton {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px 24px;
+    }
+}
+
+.nav {
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: var(--background);
+    transition: all 0.3s ease;
+    z-index: 999;
+    padding: 20px;
+    border-top: 1px solid var(--softBg);
+}
+
+.menuBtn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+    background-color: var(--background);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.loginButton {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: var(--buttonBg);
+    color: var(--buttonText);
+    transition: all 0.2s ease;
+    margin-left: 8px;
+    white-space: nowrap;
+    font-weight: 500;
+    font-family: var(--fontFamily);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginButton:hover {
+    background-color: var(--buttonHover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.socialIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textColor);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.socialIcon:hover {
+    color: var(--buttonBg);
+    transform: translateY(-2px);
+}

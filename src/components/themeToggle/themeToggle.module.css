@@ -1,0 +1,28 @@
+.container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.container:hover {
+    background-color: var(--softBg);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: var(--textColor);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .icon {
+    transform: rotate(12deg) scale(1.1);
+} 

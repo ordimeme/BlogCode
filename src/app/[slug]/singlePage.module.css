@@ -1,0 +1,121 @@
+.container {
+    padding: 20px;
+}
+
+/* 头部样式 */
+.header {
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: var(--textColor);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.username {
+    font-size: 18px;
+    color: var(--softTextColor);
+}
+
+.date {
+    font-size: 14px;
+    color: var(--softTextColor);
+}
+
+/* 主要内容区域 */
+.content {
+    display: flex;
+    gap: 50px;
+}
+
+/* 文章区域 */
+.post {
+    flex: 5;
+}
+
+.articleContent {
+    position: relative;
+}
+
+/* 图片容器 */
+.imageContainer {
+    width: 320px;
+    height: 220px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 20px 20px;
+    float: right;
+}
+
+.image {
+    object-fit: cover;
+}
+
+/* 文章内容 */
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--softTextColor);
+}
+
+.description p {
+    margin-bottom: 20px;
+}
+
+.description h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0;
+    color: var(--textColor);
+}
+
+/* 评论区 */
+.comment {
+    margin-top: 50px;
+    clear: both;
+}
+
+/* 右侧菜单 */
+.menuContainer {
+    flex: 2;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    min-width: 300px;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 1024px) {
+    .imageContainer {
+        width: 100%;
+        height: 300px;
+        float: none;
+        margin: 20px 0;
+    }
+    
+    .menuContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .imageContainer {
+        height: 200px;
+    }
+}

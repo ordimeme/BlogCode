@@ -1,0 +1,23 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+    background-color: #57c4ff31;
+    color: var(--textColor);
+    text-align: left;
+    padding: 5px 10px;
+    align-content: center;
+    height: 80px;
+}
+
+.content {
+    display: flex;
+    gap: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+} 
