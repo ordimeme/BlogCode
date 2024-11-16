@@ -308,10 +308,6 @@ const SignInModal = ({ onClose }) => {
                 <FaTelegram className={styles.socialIcon} />
                 <span>Continue with Telegram</span>
               </button>
-              <button className={`${styles.socialButton} ${styles.githubButton}`}>
-                <FaGithub className={styles.socialIcon} />
-                <span>Continue with Github</span>
-              </button>
             </div>
             <div className={styles.divider}>
               <span>OR</span>
