@@ -19,7 +19,9 @@ const Navbar = () => {
           <FaLinkedin />
         </Link>
       </div>
-      <div className={styles.logo}>BlogCode</div>
+      <div className={styles.logo}>
+        <a href="/">BlogCode</a>
+        </div>
       <div className={styles.links}>
         <ThemeToggle />
         <Link href="/" className={styles.link}>Home</Link>
